@@ -29,7 +29,7 @@ var countDown = setInterval(function() {
 
  var questions = [
      {
-         question: "Commonly used data types DO NOT include ___.",
+         question: "Commonly used data types do not include ___.",
          choice1: "strings",
          choice2: "booleans",
          choice3: "alerts",
@@ -75,7 +75,7 @@ var countDown = setInterval(function() {
 
  var startGame = function() {
  questionCounter = 0;
- score = 0;
+ scorePoints = 0;
  availableQuestions = [...questions];
  getNewQuestion();
  };
@@ -106,26 +106,24 @@ var getNewQuestion = function() {
  choices.forEach(function(choice) {
      choice.addEventListener('click', function(event) { 
          var selectedChoice = event.target;
-        var selectedAnswer = selectedChoice.dataset['number'];
+         var selectedAnswer = selectedChoice.dataset['number'];
+        
+         if (selectedAnswer == currentQuestion.answer) {
+           //need to add points to total score
+            console.log("correct!");
+         } else {
+            //need to detract time from timer
+            console.log("wrong!")
+         }
 
-        //  if (selectedAnswer == currentQuestion.answer) {
-        //      var message = document.querySelector(".hidden");
-        //      message.textContent = "Correct!";
-             
-        //      incrementScore(score);
-        //  } else {
-        //      message.textContent = "Wrong!";
-
-        //      //include detract time
-        //  }
-
-         getNewQuestion()
+         getNewQuestion();
     });
  });
+ 
 
- incrementScore = function(num) {
-    score +=num;
-    scoreText.innerText = score;
- }
+startGame();
 
- startGame();
+ //keeping track of score and letting it show up on /end.html
+ //show message if correct or incorrect
+
+ //detract time if incorrect
