@@ -1,7 +1,7 @@
 var question = document.querySelector("#question");
 var choices = Array.from(document.querySelectorAll(".answer-text"));
 var timer = document.querySelector("#timer-value");
-var btn = document.querySelectorAll(".btn");
+var choiceBtn = document.querySelectorAll(".btn");
 var scoreText = document.querySelector("#score");
 
 var currentQuestion= {};
@@ -54,10 +54,10 @@ var countDown = setInterval(function() {
      },
      {
          question: "String values must be enclosed within ____ when being assigned to variables.",
-         firstChoice: "commas",
-         secondChoice: "curly brackets",
-         thirdChoice: "quotes",
-         fourthChoice: "parentheses",
+         choice1: "commas",
+         choice2: "curly brackets",
+         choice3: "quotes",
+         choice4: "parentheses",
          answer: 3,
      },
      {
@@ -101,22 +101,23 @@ var getNewQuestion = function() {
     availableQuestions.splice(questionIndex, 1);
  };
 
+ 
 
  choices.forEach(function(choice) {
      choice.addEventListener('click', function(event) { 
          var selectedChoice = event.target;
         var selectedAnswer = selectedChoice.dataset['number'];
 
-         if (selectedAnswer == currentQuestion.answer) {
-             var message = document.querySelector(".hidden");
-             message.textContent = "Correct!";
+        //  if (selectedAnswer == currentQuestion.answer) {
+        //      var message = document.querySelector(".hidden");
+        //      message.textContent = "Correct!";
              
-             incrementScore(score);
-         } else {
-             message.textContent = "Wrong!";
+        //      incrementScore(score);
+        //  } else {
+        //      message.textContent = "Wrong!";
 
-             //include detract time
-         }
+        //      //include detract time
+        //  }
 
          getNewQuestion()
     });
