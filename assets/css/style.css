@@ -76,7 +76,8 @@ box-shadow: none;
 transform: none;
 }
 
-.hidden {
+#correct,
+#wrong {
     display: none;
 }
 

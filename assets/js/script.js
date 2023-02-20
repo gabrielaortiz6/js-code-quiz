@@ -102,21 +102,34 @@ var getNewQuestion = function() {
  };
 
  
-
+//event listener for click
  choices.forEach(function(choice) {
      choice.addEventListener('click', function(event) { 
          var selectedChoice = event.target;
          var selectedAnswer = selectedChoice.dataset['number'];
         
+         //checking to see if user selection is the correct answer. if it is correct, it will create a "correct!" message that disappears
          if (selectedAnswer == currentQuestion.answer) {
-           //need to add points to total score
-            console.log("correct!");
-         } else {
-            //need to detract time from timer
-            console.log("wrong!")
+            var correctMessage = document.getElementById("correct");
+            correctMessage.setAttribute("style", "display: block");
+            setTimeout(() => {
+                correctMessage.setAttribute("style", "display: none");
+                getNewQuestion();
+             }, 1000); 
+         //if the answer is incorrect, a "wrong!" message will appear and then disappear
+         } else if (selectedAnswer) {
+            var wrongMessage = document.getElementById("wrong");
+            wrongMessage.setAttribute("style", "display: block");
+            setTimeout(() => {
+                wrongMessage.setAttribute("style", "display: none");
+                getNewQuestion();
+             }, 1000); 
          }
 
-         getNewQuestion();
+         setTimeout(() => {
+            wrongMessage.setAttribute("style", "display: none");
+            correctMessage.setAttribute("style", "display: none");
+         }, 1000); 
     });
  });
  
