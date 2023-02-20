@@ -27,6 +27,7 @@ var countDown = setInterval(function() {
     }
 }, 1000);
 
+//creating an array of objects so I can replace filler text of questions and choices, as well as the correct choice/answer
  var questions = [
      {
          question: "Commonly used data types do not include ___.",
@@ -70,7 +71,6 @@ var countDown = setInterval(function() {
      }
  ]
 
- var score = 20;
  var maxQuestions = 5;
 
  var startGame = function() {
@@ -80,6 +80,7 @@ var countDown = setInterval(function() {
  getNewQuestion();
  };
 
+ //if the amount of available questions array is 0, or the question counter is larger than the amount of questions available (5), then store the score to the local Storage as mostRecentScore and redirect to the end.html
 var getNewQuestion = function() {
      if(availableQuestions.length === 0 || questionCounter > maxQuestions) {
          localStorage.setItem('mostRecentScore', score);
@@ -87,6 +88,7 @@ var getNewQuestion = function() {
          return window.location.assign('/end.html');
      };
 
+     //increment question counter and randomize questions, replacing filler text with questions array
      questionCounter++;
 
      var questionIndex = Math.floor(Math.random() * availableQuestions.length);
@@ -110,6 +112,7 @@ var getNewQuestion = function() {
         
          //checking to see if user selection is the correct answer. if it is correct, it will create a "correct!" message that disappears
          if (selectedAnswer == currentQuestion.answer) {
+            score += 20;
             var correctMessage = document.getElementById("correct");
             correctMessage.setAttribute("style", "display: block");
             setTimeout(() => {
@@ -135,7 +138,5 @@ var getNewQuestion = function() {
     });
  });
  
-
 startGame();
-
  //keeping track of score and letting it show up on /end.html
