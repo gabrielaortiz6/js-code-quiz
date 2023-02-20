@@ -139,5 +139,3 @@ var getNewQuestion = function() {
  });
  
 startGame();
- //keeping track of score and letting it show up on /end.html
-
