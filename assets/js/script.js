@@ -116,7 +116,7 @@ var getNewQuestion = function() {
                 correctMessage.setAttribute("style", "display: none");
                 getNewQuestion();
              }, 1000); 
-         //if the answer is incorrect, a "wrong!" message will appear and then disappear
+         //if the answer is incorrect, a "wrong!" message will appear and then disappear and time will be detracted
          } else if (selectedAnswer) {
             var wrongMessage = document.getElementById("wrong");
             wrongMessage.setAttribute("style", "display: block");
@@ -124,6 +124,8 @@ var getNewQuestion = function() {
                 wrongMessage.setAttribute("style", "display: none");
                 getNewQuestion();
              }, 1000); 
+             count -= 10;
+             timer.innerHTML= count;
          }
 
          setTimeout(() => {
@@ -137,6 +139,3 @@ var getNewQuestion = function() {
 startGame();
 
  //keeping track of score and letting it show up on /end.html
- //show message if correct or incorrect
-
- //detract time if incorrect

@@ -93,6 +93,11 @@ transform: none;
    width: 10rem;
 }
 
+.no-text-decoration {
+    text-decoration: none;
+    color: white;
+}
+
 #highscore-btn:hover {
     cursor: pointer;
     color: var(--light-purple);
