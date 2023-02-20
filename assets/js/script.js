@@ -83,7 +83,7 @@ var countDown = setInterval(function() {
  //if the amount of available questions array is 0, or the question counter is larger than the amount of questions available (5), then store the score to the local Storage as mostRecentScore and redirect to the end.html
 var getNewQuestion = function() {
      if(availableQuestions.length === 0 || questionCounter > maxQuestions) {
-         localStorage.setItem('mostRecentScore', score);
+         var mostRecentScore = localStorage.setItem('mostRecentScore', score);
 
          return window.location.assign('/end.html');
      };
@@ -140,3 +140,4 @@ var getNewQuestion = function() {
  
 startGame();
  //keeping track of score and letting it show up on /end.html
+
