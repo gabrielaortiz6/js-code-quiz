@@ -1,12 +1,8 @@
 # Interactive JavaScript Quiz
 
-## Your Task
+## Description
 
-At some point in your journey to become a full-stack web developer, you’ll likely be asked to complete a coding assessment&mdash;perhaps as part of an interview process. A typical coding assessment includes both multiple-choice questions and interactive coding challenges. 
-
-To help familiarize you with these tests and allow you to use the skills covered in this module, this Challenge invites you to build a timed coding quiz with multiple-choice questions. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean, polished, and responsive user interface. 
-
-This week’s coursework will equip you with all the skills you need to succeed in this assignment.
+This coding quiz was designed for students to practice their JavaScript knowledge. It deploys a message, letting the user know if they choose correctly or incorrectly. If they choose incorrectly, they are penalized seconds from the timer. At the end, there is a form for the user to enter their initials and save their score. Finally, they can see their score and initials displayed on the high score page. 
 
 ## User Story
 
@@ -34,65 +30,20 @@ THEN I can save my initials and my score
 
 ## Mock-Up
 
-The following animation demonstrates the application functionality:
+The following screenshots demonstrates the application functionality:
 
-![A user clicks through an interactive coding quiz, then enters initials to save the high score before resetting and starting over.](./assets/images/04-web-apis-homework-demo.gif)
+![Screenshot of the landing page.](./assets/screenshot-landing-page.png)
 
-## Grading Requirements
+![Screenshot of question 1](./assets/images/screenshot-first-question.png)
 
-> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
+![Screenshot of question 2, displaying "wrong!" message and penalized time](./assets/images/screenshot-question-2.png)
 
-This Challenge is graded based on the following criteria: 
+![Screenshot of page where user is prompted to enter initials.](./assets/images/screenshot-initials.png)
 
-### Technical Acceptance Criteria: 40%
+![Screenshot of High Scores page.](./assets/images/screenshot-highscores.png)
 
-* Satisfies all of the preceding acceptance criteria.
+## Link to Deployed Site
 
-### Deployment: 32%
-
-* Application deployed at live URL.
-
-* Application loads with no errors.
-
-* Application GitHub URL submitted.
-
-* GitHub repository contains application code.
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application resembles the mock-up functionality provided in the Challenge instructions.
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality readme file with description, screenshot, and link to deployed application.
-
-## Review
-
-You are required to submit BOTH of the following for review:
-
-* The URL of the functional, deployed application.
-
-* The URL of the GitHub repository, with a unique name and a readme describing the project.
 
 ---
 

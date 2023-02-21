@@ -1,8 +1,8 @@
 var highScoresList = document.querySelector("#high-scores-list");
 var highScores = JSON.parse(localStorage.getItem("highScores"));
+var clearScoreBtn = document.querySelector("#clear-score-btn");
 
 //create <li> elements with the saved initials/name and score
-
 var splitHighScores = Object.values(highScores);
 
 var stringSplitHighScores = splitHighScores.toString();
@@ -16,3 +16,8 @@ function renderHighScoresList() {
 }
 
 renderHighScoresList();
+
+clearScoreBtn.addEventListener("click", function(event) {
+    localStorage.clear();
+    highScoresList.remove();
+})

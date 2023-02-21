@@ -13,6 +13,7 @@ submitBtn.addEventListener("click", saveHighScore);
 
 //saves initials and score
 function saveHighScore(event) {
+   
     var score = {
         name: initials.value,
         score: mostRecentScore,
@@ -20,5 +21,3 @@ function saveHighScore(event) {
 
     localStorage.setItem("highScores", JSON.stringify(score));
 }
-
-console.log(highScores);
