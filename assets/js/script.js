@@ -85,7 +85,7 @@ var getNewQuestion = function() {
      if(availableQuestions.length === 0 || questionCounter > maxQuestions) {
          var mostRecentScore = localStorage.setItem('mostRecentScore', score);
 
-         return window.location.assign('/end.html');
+         return window.location.assign("/end.html");
      };
 
      //increment question counter and randomize questions, replacing filler text with questions array
@@ -137,12 +137,5 @@ var getNewQuestion = function() {
          }, 1000); 
     });
  });
-
- function redirectPage() {
-    if (availableQuestions == 0) {
-        return window.location.href = "/end.html";
-    }
- }
  
 startGame();
-redirectPage();
