@@ -32,7 +32,7 @@ THEN I can save my initials and my score
 
 The following screenshots demonstrates the application functionality:
 
-![Screenshot of the landing page.](./assets/screenshot-landing-page.png)
+![Screenshot of the landing page.](./assets/images/screenshot-landing-page.png)
 
 ![Screenshot of question 1](./assets/images/screenshot-first-question.png)
 
