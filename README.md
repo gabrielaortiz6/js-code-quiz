@@ -44,6 +44,7 @@ The following screenshots demonstrates the application functionality:
 
 ## Link to Deployed Site
 
+[link to site](https://gabrielaortiz6.github.io/js-code-quiz/quiz.html/)
 
 ---
 
