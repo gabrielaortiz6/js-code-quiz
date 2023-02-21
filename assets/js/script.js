@@ -23,7 +23,7 @@ var countDown = setInterval(function() {
         clearInterval(countDown);
         alert("Oops! You ran out of time.");
 
-        return window.location.assign('/html/end.html');
+        return window.location.assign('./html/end.html');
     }
 }, 1000);
 
@@ -85,7 +85,8 @@ var getNewQuestion = function() {
      if(availableQuestions.length === 0 || questionCounter > maxQuestions) {
          var mostRecentScore = localStorage.setItem('mostRecentScore', score);
 
-         return window.location.assign("/html/end.html");
+         return window.location.href = "./html/end.html";
+         //window.location.assign("./html/end.html");
      };
 
      //increment question counter and randomize questions, replacing filler text with questions array
