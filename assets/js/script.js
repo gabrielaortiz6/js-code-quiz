@@ -24,7 +24,6 @@ var countDown = setInterval(function() {
         alert("Oops! You ran out of time.");
 
         return window.location.assign('/end.html');
-        return window.location.href = "/end.html";
     }
 }, 1000);
 
@@ -138,5 +137,12 @@ var getNewQuestion = function() {
          }, 1000); 
     });
  });
+
+ function redirectPage() {
+    if (availableQuestions == 0) {
+        return window.location.href = "/end.html";
+    }
+ }
  
 startGame();
+redirectPage();
