@@ -24,6 +24,7 @@ var countDown = setInterval(function() {
         alert("Oops! You ran out of time.");
 
         return window.location.assign('/end.html');
+        return window.location.href = "/end.html";
     }
 }, 1000);
 
