@@ -23,7 +23,7 @@ var countDown = setInterval(function() {
         clearInterval(countDown);
         alert("Oops! You ran out of time.");
 
-        return window.location.assign('./end.html');
+        return window.location.assign('/end.html');
     }
 }, 1000);
 
