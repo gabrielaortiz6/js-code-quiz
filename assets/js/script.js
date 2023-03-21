@@ -85,7 +85,7 @@ var getNewQuestion = function() {
      if(availableQuestions.length === 0 || questionCounter > maxQuestions) {
          var mostRecentScore = localStorage.setItem('mostRecentScore', score);
 
-         return window.location.href = "./html/end.html";
+         return window.location.href = "./end.html";
          //window.location.assign("./html/end.html");
      };
 
